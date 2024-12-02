@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #333;
+}
+
+input, button {
+    padding: 10px;
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+#result-area {
+    margin-top: 20px;
+}
+
+#fortune-image {
+    margin-top: 10px;
+    max-width: 100%;
+}
