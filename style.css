@@ -1,3 +1,22 @@
+/* 全体スタイル */
+body {
+    font-family: 'Yu Mincho', serif;
+    background-color: #fcefe3;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    border: 2px solid #d7ccc8;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
 /* メニューバー */
 .menu-bar {
     position: sticky;
@@ -33,6 +52,113 @@
 .menu-bar a:hover {
     background-color: #0d47a1;
     border-radius: 5px;
+}
+
+/* 見出しスタイル */
+h1 {
+    font-size: 28px;
+    color: #1976d2;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #1976d2;
+    font-size: 22px;
+    margin-top: 20px;
+    border-bottom: 2px solid #1976d2;
+    padding-bottom: 5px;
+}
+
+/* 開発者情報セクション */
+.developer-section {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-list, .tech-list, .contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.profile-list li, .tech-list li, .contact-list li {
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.profile-list strong {
+    color: #1976d2;
+}
+
+/* リンクのスタイル */
+.contact-list a {
+    color: #1976d2;
+    text-decoration: none;
+}
+
+.contact-list a:hover {
+    text-decoration: underline;
+}
+
+/* スピナー */
+.fancy-spinner {
+    position: relative;
+    margin: 20px auto;
+    width: 64px;
+    height: 64px;
+    animation: rotate 1.5s linear infinite;
+}
+
+.fancy-spinner::before,
+.fancy-spinner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border: 4px solid transparent;
+    border-radius: 50%;
+    animation: fancy-circle 1.5s linear infinite;
+}
+
+.fancy-spinner::before {
+    width: 64px;
+    height: 64px;
+    border-top-color: #d32f2f;
+    border-bottom-color: #fbc02d;
+    animation-delay: 0s;
+}
+
+.fancy-spinner::after {
+    width: 48px;
+    height: 48px;
+    border-left-color: #1976d2;
+    border-right-color: #4caf50;
+    animation-delay: -0.75s;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fancy-circle {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.5);
+    }
 }
 
 /* スムーズスクロール */
