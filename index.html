@@ -7,7 +7,16 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
+    <!-- メニューバー -->
+    <nav class="menu-bar">
+        <ul>
+            <li><a href="#main">おみくじ</a></li>
+            <li><a href="#developer-info">開発者情報</a></li>
+        </ul>
+    </nav>
+
+    <!-- おみくじセクション -->
+    <div id="main" class="container">
         <h1>おみくじを引こう！</h1>
         <input type="text" id="name" placeholder="名前を入力してください" class="name-input">
         <button id="draw-button" class="draw-button">おみくじを引く</button>
@@ -24,6 +33,15 @@
             </div>
         </div>
     </div>
+
+    <!-- 開発者情報セクション -->
+    <div id="developer-info" class="developer-section">
+        <h2>開発者情報</h2>
+        <p>このおみくじサイトは、未来の技術を探求するために開発されました。</p>
+        <p>開発者: Kaede</p>
+        <p>お問い合わせ: <a href="mailto:kaedeek@example.com">kaedeek@example.com</a></p>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="script.js"></script>
 </body>

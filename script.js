@@ -34,21 +34,16 @@ document.getElementById('draw-button').addEventListener('click', async () => {
     const imageElement = document.getElementById('omikuji-image');
     const loadingSpinner = document.getElementById('loading-spinner');
 
-    // 初期化
     resultText.textContent = "";
     detailText.textContent = "";
     imageElement.style.display = "none";
 
-    // スピナー表示
     loadingSpinner.style.display = "block";
 
-    // APIリクエスト
     const data = await getOmikujiResult(name);
 
-    // スピナー非表示
     loadingSpinner.style.display = "none";
 
-    // 結果を表示
     resultText.textContent = `${name}さんの結果は「${data.result}」です！`;
     detailText.textContent = data.fortune || "詳細はありません。";
 
