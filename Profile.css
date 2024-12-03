@@ -1,0 +1,34 @@
+/* プロフィール情報のスタイル */
+.profile-list, .tech-list, .contact-list {
+    list-style: none;  /* リストのスタイルを削除 */
+    padding: 0;        /* パディングを削除 */
+    margin: 10px 0;    /* 上下のマージンを追加 */
+}
+
+.profile-list li, .tech-list li, .contact-list li {
+    margin-bottom: 5px;  /* 各リストアイテムの間隔を調整 */
+    font-size: 16px;     /* フォントサイズを設定 */
+}
+
+.profile-list strong {
+    color: #1976d2;  /* strongタグの色を青に変更 */
+}
+
+/* 見出しスタイル */
+.developer-section h2 {
+    color: #1976d2;           /* 見出しの色を青に設定 */
+    font-size: 20px;          /* フォントサイズを設定 */
+    margin-top: 20px;         /* 見出しの上にマージンを追加 */
+    border-bottom: 2px solid #1976d2;  /* 見出しの下に青色のボーダーを追加 */
+    padding-bottom: 5px;      /* ボーダーとの間に少しスペースを確保 */
+}
+
+/* リンクのスタイル */
+.contact-list a {
+    color: #1976d2;        /* リンクの色を青に設定 */
+    text-decoration: none;  /* リンクの下線を削除 */
+}
+
+.contact-list a:hover {
+    text-decoration: underline;  /* ホバー時に下線を追加 */
+}
