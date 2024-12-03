@@ -8,12 +8,20 @@
 </head>
 <body>
     <div class="container">
-        <input type="text" id="name" placeholder="あなたの名前を入力してください">
-        <button id="draw-button">おみくじを引く</button>
-        <div id="result-area">
-            <p id="omikuji-result"></p>
-            <p id="omikuji-detail"></p>
-            <img id="omikuji-image" alt="おみくじ結果" style="display: none;">
+        <h1>おみくじを引こう！</h1>
+        <input type="text" id="name" placeholder="名前を入力してください" class="name-input">
+        <button id="draw-button" class="draw-button">おみくじを引く</button>
+        
+        <!-- スピナー -->
+        <div id="loading-spinner" style="display: none;" class="spinner"></div>
+        
+        <!-- 結果表示 -->
+        <div id="result-area" class="result-area">
+            <div class="omikuji-paper">
+                <p id="omikuji-result"></p>
+                <p id="omikuji-detail"></p>
+                <img id="omikuji-image" alt="おみくじ結果画像" style="display: none;">
+            </div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
