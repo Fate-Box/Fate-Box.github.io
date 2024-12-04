@@ -52,3 +52,40 @@ document.getElementById('draw-button').addEventListener('click', async () => {
         imageElement.style.display = "block";
     }
 });
+
+const API_URL = "https://fate-box-api.onrender.com/"; // APIのURL
+const progressBar = document.getElementById("progress-bar");
+const progressPercent = document.getElementById("progress-percent");
+const resultArea = document.getElementById("result-area");
+
+/**
+ * 進捗状況を取得して更新
+ */
+async function updateProgress() {
+    try {
+        const response = await fetch(API_URL);
+        if (!response.ok) {
+            throw new Error("APIの取得に失敗しました");
+        }
+
+        const data = await response.json();
+        const progress = Math.min(Math.max(data.progress, 0), 100); // 進捗率（0〜100に制限）
+
+        // 進捗バーの幅を更新
+        progressBar.style.width = `${progress}%`;
+        progressPercent.textContent = `${progress}%`;
+
+        // 進捗完了時
+        if (progress === 100) {
+            resultArea.style.display = "block";
+        } else {
+            resultArea.style.display = "none";
+        }
+    } catch (error) {
+        console.error("進捗更新エラー:", error);
+    }
+}
+
+// 一時間ごとに更新
+updateProgress();
+setInterval(updateProgress, 3600000); // 1時間（3600000ms）

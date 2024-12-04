@@ -125,6 +125,61 @@ html {
     border-radius: 5px;
 }
 
+/* 進捗バーコンテナ */
+.progress-container {
+    margin-top: 20px;
+    text-align: center;
+    padding: 20px;
+    background-color: #fff8e1; /* 和風背景色 */
+    border-radius: 10px;
+    border: 2px solid #d7ccc8;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 進捗バーラベル */
+.progress-label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* 進捗バー */
+.progress-bar {
+    width: 100%;
+    background-color: #f8f3e5;
+    border-radius: 5px;
+    border: 2px solid #bdbdbd;
+    height: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-bar span {
+    display: block;
+    height: 100%;
+    width: 0%; /* 初期状態の幅を0に設定 */
+    background: linear-gradient(90deg, #d32f2f, #fbc02d); /* 赤から黄色へのグラデーション */
+    border-radius: 5px;
+    transition: width 1s ease; /* スムーズな幅変化 */
+}
+
+/* 進捗パーセンテージ表示 */
+.progress-percent {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #1976d2; /* 和風の青色 */
+}
+
+/* 進捗完了時のスタイル */
+.result-complete {
+    margin-top: 20px;
+    font-size: 24px;
+    color: #388e3c; /* 緑色で成功を表現 */
+    font-weight: bold;
+}
+
+
 /* 開発者情報ページ */
 .developer-section {
     padding: 20px;
